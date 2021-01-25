@@ -1,0 +1,7 @@
+MID_L2_BOND	麦克劳林久期	mac_dur	NUMBER(32,16)
+MID_L2_BOND	凸性	conv_val	NUMBER(32,16)
+MID_L2_BOND	基点价值	bas_pnt_val	NUMBER(32,16)
+MID_L2_BOND	含权麦克劳林久期	mac_dur_ex	NUMBER(32,16)
+MID_L2_BOND	含权凸性	conv_val_ex	NUMBER(32,16)
+MID_L2_BOND	含权基点价值	bas_pnt_val_ex	NUMBER(32,16)
+MID_L2_BOND	含权行权推荐点	exer_date	NUMBER(32,16)
