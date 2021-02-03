@@ -50,7 +50,7 @@ public class IoUtil {
 
 
     public static void main(String[] args) {//主程序，程序入口
-        mvFile();
+        mkdir();
 
 //        File file=new File("D:\\Qiju_Li");
 //        if(!file.exists()){//如果文件夹不存在

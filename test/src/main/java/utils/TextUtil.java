@@ -4,10 +4,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,7 +13,6 @@ public class TextUtil {
 
     /**
      * 得到文本中每一行的数据,返后一个字符串数组
-     *
      * @param filePath 文件路径
      * @return 字符串数组
      */
@@ -34,6 +30,11 @@ public class TextUtil {
     }
 
 
+    /**
+     *  得到文本中的每一行和行号，返回一个map
+     * @param filePath 文件路径
+     * @return
+     */
     public static Map<String, Integer> getLinesAndNo(String filePath) {
         // String filePath = "D:\\IdeaProjects\\test\\src\\main\\resources\\column.txt";
         HashMap<String, Integer> map = new HashMap<>();
@@ -55,6 +56,12 @@ public class TextUtil {
         return map;
     }
 
+
+    /**
+     * 得到文本中的内容饭后一个字符串
+     * @param file1
+     * @return
+     */
     public static String getAllText(File file1) {
 
         Path filePath = Paths.get(file1.toString());
@@ -73,6 +80,22 @@ public class TextUtil {
         }
         return result;
     }
+
+
+    /**
+     *  判断文本中是否包含某个值
+     * @param file  文件路径
+     * @param regex  匹配值
+     * @return
+     */
+    public static boolean findSomeThingFromTable(File file, String regex) {
+        String allText = TextUtil.getAllText(file);
+        String allTextToLow = allText.toLowerCase(Locale.ROOT);
+        boolean contains = allTextToLow.contains(regex);
+
+        return contains;
+    }
+
 
 
     public static void main(String[] args) {

@@ -96,6 +96,7 @@ public class ddl {
 
             oracleSql = ("alter table " + split[0] + " add(" + split[2] + " " + split[3] + " );\n" + "comment on column " + split[0] + "." + split[2] + " is " + "'" + split[1] + "';").toLowerCase(Locale.ROOT);
             oracleSqls.add(oracleSql);
+            System.out.println(oracleSql);
             //    String fileName = updatePath + split[0].toLowerCase(Locale.ROOT) + ".sql";
 
         }
